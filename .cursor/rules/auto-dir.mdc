@@ -1,0 +1,17 @@
+---
+description: Detect Persian vs Latin in copy and isolate direction automatically
+globs: src/**/*.{tsx,ts}
+alwaysApply: true
+---
+
+# Automatic text direction
+
+Render user-facing strings with `AutoDir` from `@/components/AutoDir`. Do not drop raw copy into headings, paragraphs, addresses, or links.
+
+- Persian / Arabic letters are RTL.
+- Latin letters and ASCII digits (phones, emails, street addresses) isolate as LTR, even on `/fa`.
+- If a string is only Latin/digits, set `dir="ltr"` on that block.
+- If a string is only Persian, set `dir="rtl"` (or inherit).
+- If a string mixes both, do **not** flip the whole block. Keep the page direction and isolate Latin runs with `<bdi>`. First-letter detection is not enough.
+- Keep address blocks `block w-fit`, never `inline-block` next to Persian links.
+- Form `input`, `textarea`, and `select` use `dir="auto"`.
