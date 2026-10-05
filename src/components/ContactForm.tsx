@@ -62,7 +62,7 @@ export function ContactForm({ copy }: { copy: FormCopy }) {
   }
 
   return (
-    <form onSubmit={onSubmit} noValidate className="grid gap-5 rounded-3xl border border-line bg-cream p-6 md:p-8">
+    <form onSubmit={onSubmit} noValidate className="grid gap-5 rounded-3xl border border-line bg-cream p-5 sm:p-6 md:p-8">
       <AutoDir as="p" className="text-sm text-muted">
         {copy.preview}
       </AutoDir>
@@ -157,4 +157,4 @@ function Field({
 }
 
 const inputClass =
-  "w-full rounded-2xl border border-line bg-white px-4 py-3 text-base font-normal text-ink outline-none focus:border-gold";
+  "w-full min-w-0 rounded-2xl border border-line bg-white px-4 py-3 text-base font-normal text-ink outline-none focus:border-gold";

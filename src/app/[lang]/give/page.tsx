@@ -18,12 +18,12 @@ export default async function GivePage({ params }: PageProps<"/[lang]/give">) {
   return (
     <>
       <PageHeader eyebrow={page.eyebrow} title={page.title} lead={page.lead} />
-      <div className="mx-auto grid max-w-6xl gap-8 px-5 py-16">
-        <AutoDir as="p" className="text-2xl text-purple">
+      <div className="mx-auto grid max-w-6xl gap-8 px-4 py-12 sm:px-5 sm:py-16">
+        <AutoDir as="p" className="text-xl text-purple sm:text-2xl">
           {page.thanks}
         </AutoDir>
         <section className="grid gap-4 md:grid-cols-2">
-          <article className="rounded-3xl bg-ink p-8 text-cream">
+          <article className="rounded-3xl bg-ink p-6 text-cream sm:p-8">
             <AutoDir as="h2" className="text-2xl font-semibold">
               {page.checkTitle}
             </AutoDir>
@@ -48,7 +48,7 @@ export default async function GivePage({ params }: PageProps<"/[lang]/give">) {
               ))}
             </AutoDirBox>
           </article>
-          <article className="rounded-3xl border border-line bg-cream p-8">
+          <article className="rounded-3xl border border-line bg-cream p-6 sm:p-8">
             <AutoDir as="p" className="leading-8 text-muted">
               {page.legal}
             </AutoDir>
@@ -58,10 +58,10 @@ export default async function GivePage({ params }: PageProps<"/[lang]/give">) {
           </article>
         </section>
         <section>
-          <AutoDir as="h2" className="text-3xl font-semibold">
+          <AutoDir as="h2" className="text-2xl font-semibold sm:text-3xl">
             {page.ministriesTitle}
           </AutoDir>
-          <div className="mt-6 grid gap-4 md:grid-cols-3">
+          <div className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {page.ministries.map((item) => (
               <article key={item.title} className="rounded-3xl bg-white p-6">
                 <AutoDir as="h3" className="text-xl font-semibold">

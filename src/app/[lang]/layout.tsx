@@ -59,7 +59,7 @@ export default async function RootLayout({
         >
           <AutoDir>{dict.ui.skip}</AutoDir>
         </a>
-        <AutoDir as="p" className="bg-gold px-5 py-2 text-center text-sm font-medium text-ink">
+        <AutoDir as="p" className="bg-gold px-4 py-2 text-center text-xs leading-6 font-medium text-ink sm:px-5 sm:text-sm">
           {dict.banner}
         </AutoDir>
         <Header

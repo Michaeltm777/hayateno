@@ -12,8 +12,8 @@ export default function NotFound() {
   const copy = getDictionary(locale).notFound;
 
   return (
-    <div className="mx-auto max-w-xl px-5 py-24 text-center">
-      <AutoDir as="h1" className="text-4xl font-semibold">
+    <div className="mx-auto max-w-xl px-4 py-16 text-center sm:px-5 sm:py-24">
+      <AutoDir as="h1" className="text-3xl font-semibold sm:text-4xl">
         {copy.title}
       </AutoDir>
       <AutoDir as="p" className="mt-4 leading-8 text-muted">

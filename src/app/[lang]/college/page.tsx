@@ -18,7 +18,7 @@ export default async function CollegePage({ params }: PageProps<"/[lang]/college
   return (
     <>
       <PageHeader eyebrow={page.eyebrow} title={page.title} lead={page.lead} />
-      <div className="mx-auto max-w-4xl px-5 py-16">
+      <div className="mx-auto max-w-4xl px-4 py-12 sm:px-5 sm:py-16">
         <div className="grid gap-4">
           {page.points.map((point) => (
             <article key={point.title} className="rounded-3xl border border-line bg-cream p-6">

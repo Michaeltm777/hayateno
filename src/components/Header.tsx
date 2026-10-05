@@ -49,29 +49,29 @@ export function Header({
 
   return (
     <header className="sticky top-0 z-40 border-b border-white/10 bg-ink/95 text-cream backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3">
-        <Link href={localePath(locale, "/")} className="flex items-center gap-3">
-          <Logo preload />
-          <span>
-            <AutoDir as="span" className="block text-lg font-semibold leading-6">
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:gap-4 sm:px-5">
+        <Link href={localePath(locale, "/")} className="flex min-w-0 items-center gap-2 sm:gap-3">
+          <Logo preload className="h-10 w-10 shrink-0 sm:h-12 sm:w-12" />
+          <span className="min-w-0">
+            <AutoDir as="span" className="block truncate text-sm font-semibold leading-5 sm:text-lg sm:leading-6">
               {brand.title}
             </AutoDir>
             <AutoDir
               as="span"
-              className="block text-[11px] tracking-[0.22em] text-gold uppercase"
+              className="block truncate text-[10px] tracking-[0.14em] text-gold uppercase sm:text-[11px] sm:tracking-[0.22em]"
             >
               {brand.subtitle}
             </AutoDir>
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-6 lg:flex" aria-label="Main">
+        <nav className="hidden items-center gap-4 xl:flex xl:gap-6" aria-label="Main">
           {nav.map((item) => (
             <Link
               key={item.href}
               href={localePath(locale, item.href)}
               aria-current={isActive(item.href) ? "page" : undefined}
-              className={`text-sm transition ${
+              className={`whitespace-nowrap text-sm transition ${
                 isActive(item.href) ? "text-gold" : "text-cream/80 hover:text-gold"
               }`}
             >
@@ -80,7 +80,7 @@ export function Header({
           ))}
         </nav>
 
-        <div className="hidden items-center gap-3 lg:flex">
+        <div className="hidden items-center gap-3 xl:flex">
           <LanguageSwitch
             pathname={pathname}
             locale={locale}
@@ -96,7 +96,7 @@ export function Header({
 
         <button
           type="button"
-          className="rounded-full border border-white/15 px-4 py-2 text-sm lg:hidden"
+          className="shrink-0 rounded-full border border-white/15 px-3 py-2 text-sm sm:px-4 xl:hidden"
           aria-expanded={open}
           onClick={() => setOpen((value) => !value)}
         >
@@ -105,7 +105,7 @@ export function Header({
       </div>
 
       {open ? (
-        <div className="border-t border-white/10 px-5 py-4 lg:hidden">
+        <div className="border-t border-white/10 px-4 py-4 sm:px-5 xl:hidden">
           <nav className="grid gap-3" aria-label="Main">
             {nav.map((item) => (
               <Link
@@ -117,7 +117,7 @@ export function Header({
               </Link>
             ))}
           </nav>
-          <div className="mt-4 flex items-center justify-between gap-3">
+          <div className="mt-4 flex flex-wrap items-center justify-between gap-3">
             <LanguageSwitch pathname={pathname} locale={locale} langLabel={langLabel} />
             <Link
               href={contactHref}

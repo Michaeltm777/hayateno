@@ -19,9 +19,9 @@ export default async function ContactPage({ params }: PageProps<"/[lang]/contact
   return (
     <>
       <PageHeader eyebrow={page.eyebrow} title={page.title} lead={page.lead} />
-      <div className="mx-auto grid max-w-6xl gap-10 px-5 py-16 lg:grid-cols-[0.85fr_1.15fr]">
+      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:px-5 sm:py-16 lg:grid-cols-[0.85fr_1.15fr]">
         <div>
-          <dl className="grid gap-6 rounded-3xl bg-ink p-8 text-cream">
+          <dl className="grid gap-6 rounded-3xl bg-ink p-6 text-cream sm:p-8">
             <div>
               <dt className="text-sm text-gold">
                 <AutoDir>{page.addressLabel}</AutoDir>
@@ -30,7 +30,7 @@ export default async function ContactPage({ params }: PageProps<"/[lang]/contact
                 <AutoDirBox
                   as="div"
                   text={dict.church.address.join(" ")}
-                  className="mt-2 w-full text-start leading-7"
+                  className="mt-2 w-full break-words text-start leading-7"
                 >
                   {dict.church.address.map((line) => (
                     <AutoDir key={line} as="span" className="block">
@@ -55,13 +55,13 @@ export default async function ContactPage({ params }: PageProps<"/[lang]/contact
                 <AutoDir>{page.emailLabel}</AutoDir>
               </dt>
               <dd>
-                <AutoDirBox as="div" text={dict.church.email} className="mt-2 w-full text-start">
+                <AutoDirBox as="div" text={dict.church.email} className="mt-2 w-full break-all text-start">
                   <AutoDirLink href={`mailto:${dict.church.email}`}>{dict.church.email}</AutoDirLink>
                 </AutoDirBox>
               </dd>
             </div>
           </dl>
-          <AutoDir as="h2" className="mt-10 text-2xl font-semibold">
+          <AutoDir as="h2" className="mt-10 text-xl font-semibold sm:text-2xl">
             {page.faqTitle}
           </AutoDir>
           <div className="mt-4 grid gap-4">

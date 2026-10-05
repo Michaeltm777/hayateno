@@ -18,7 +18,7 @@ export default async function TestimoniesPage({ params }: PageProps<"/[lang]/tes
   return (
     <>
       <PageHeader eyebrow={page.eyebrow} title={page.title} lead={page.lead} />
-      <div className="mx-auto max-w-3xl px-5 py-16">
+      <div className="mx-auto max-w-3xl px-4 py-12 sm:px-5 sm:py-16">
         <AutoDir as="h2" className="text-2xl font-semibold">
           {page.howTitle}
         </AutoDir>
@@ -34,7 +34,7 @@ export default async function TestimoniesPage({ params }: PageProps<"/[lang]/tes
           {page.emailLabel}
         </AutoDir>
         <AutoDirLink
-          className="mt-2 inline-block text-xl font-semibold text-purple"
+          className="mt-2 inline-block max-w-full break-all text-lg font-semibold text-purple sm:text-xl"
           href={`mailto:${dict.church.email}`}
         >
           {dict.church.email}

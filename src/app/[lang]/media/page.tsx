@@ -18,8 +18,8 @@ export default async function MediaPage({ params }: PageProps<"/[lang]/media">) 
   return (
     <>
       <PageHeader eyebrow={dict.media.eyebrow} title={dict.media.title} lead={dict.media.lead} />
-      <div className="mx-auto grid max-w-6xl gap-10 px-5 py-16">
-        <section className="rounded-3xl bg-purple-deep p-8 text-cream">
+      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:px-5 sm:py-16">
+        <section className="rounded-3xl bg-purple-deep p-6 text-cream sm:p-8">
           <AutoDir as="h2" className="text-2xl font-semibold">
             {dict.media.liveTitle}
           </AutoDir>
@@ -28,7 +28,7 @@ export default async function MediaPage({ params }: PageProps<"/[lang]/media">) 
           </AutoDir>
         </section>
         <section>
-          <AutoDir as="h2" className="text-3xl font-semibold">
+          <AutoDir as="h2" className="text-2xl font-semibold sm:text-3xl">
             {dict.media.archiveTitle}
           </AutoDir>
           <div className="mt-6 grid gap-4 md:grid-cols-2">

@@ -17,7 +17,7 @@ export default async function BeliefsPage({ params }: PageProps<"/[lang]/beliefs
   return (
     <>
       <PageHeader eyebrow={beliefs.eyebrow} title={beliefs.title} lead={beliefs.lead} />
-      <div className="mx-auto grid max-w-6xl gap-10 px-5 py-16 lg:grid-cols-[240px_1fr]">
+      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:px-5 sm:py-16 lg:grid-cols-[240px_1fr]">
         <aside className="h-fit lg:sticky lg:top-24">
           <nav className="grid gap-2" aria-label={beliefs.eyebrow}>
             {beliefs.items.map((item) => (
@@ -29,7 +29,7 @@ export default async function BeliefsPage({ params }: PageProps<"/[lang]/beliefs
         </aside>
         <div className="grid gap-6">
           {beliefs.items.map((item) => (
-            <article key={item.id} id={item.id} className="scroll-mt-28 rounded-3xl border border-line bg-cream p-7">
+            <article key={item.id} id={item.id} className="scroll-mt-28 rounded-3xl border border-line bg-cream p-5 sm:p-7">
               <AutoDir as="h2" className="text-2xl font-semibold">
                 {item.title}
               </AutoDir>

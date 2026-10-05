@@ -7,7 +7,7 @@ import type { Dictionary } from "@/i18n/types";
 export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   return (
     <footer className="mt-auto bg-ink text-cream">
-      <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 md:grid-cols-[1.4fr_1fr_1fr]">
+      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-10 sm:px-5 sm:py-14 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr]">
         <div>
           <div className="flex items-center gap-3">
             <Logo className="h-11 w-11" />
@@ -59,7 +59,7 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
           <AutoDirBox
             as="address"
             text={[...dict.church.address, dict.church.phone, dict.church.email].join(" ")}
-            className="mt-6 block w-fit max-w-full text-start leading-7 text-cream/75 not-italic"
+            className="mt-6 w-full break-words text-start leading-7 text-cream/75 not-italic"
           >
             {dict.church.address.map((line) => (
               <AutoDir key={line} as="span" className="block">
@@ -75,7 +75,7 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
           </AutoDirBox>
         </div>
       </div>
-      <AutoDir as="div" className="border-t border-white/10 px-5 py-4 text-center text-sm text-cream/50">
+      <AutoDir as="div" className="border-t border-white/10 px-4 py-4 text-center text-sm text-cream/50 sm:px-5">
         {dict.brand.title}
       </AutoDir>
     </footer>

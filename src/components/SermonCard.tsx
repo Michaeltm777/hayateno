@@ -14,7 +14,7 @@ export function SermonCard({
   return (
     <Link
       href={href}
-      className="group flex h-full flex-col rounded-3xl border border-line bg-cream p-6 transition hover:-translate-y-0.5 hover:border-gold"
+      className="group flex h-full flex-col rounded-3xl border border-line bg-cream p-5 transition hover:-translate-y-0.5 hover:border-gold sm:p-6"
     >
       <AutoDir as="p" className="text-sm text-gold">
         {sermon.date}

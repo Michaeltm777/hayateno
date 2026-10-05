@@ -26,14 +26,14 @@ export default async function SermonPage({ params }: PageProps<"/[lang]/media/[s
   const related = dict.sermons.filter((item) => item.slug !== slug).slice(0, 3);
 
   return (
-    <article className="mx-auto max-w-4xl px-5 py-16">
+    <article className="mx-auto max-w-4xl px-4 py-12 sm:px-5 sm:py-16">
       <Link href={localePath(lang, paths.media)} className="text-sm font-semibold text-purple">
         <AutoDir>{dict.media.archiveTitle}</AutoDir>
       </Link>
       <AutoDir as="p" className="mt-6 text-sm text-gold">
         {sermon.series}
       </AutoDir>
-      <AutoDir as="h1" className="mt-3 text-4xl font-semibold leading-tight">
+      <AutoDir as="h1" className="mt-3 text-2xl font-semibold leading-tight sm:text-4xl">
         {sermon.title}
       </AutoDir>
       <p className="mt-4 text-muted">
@@ -41,7 +41,7 @@ export default async function SermonPage({ params }: PageProps<"/[lang]/media/[s
         {" · "}
         <AutoDir>{sermon.speaker}</AutoDir>
       </p>
-      <div className="mt-8 rounded-3xl border border-dashed border-gold bg-gold-soft p-8">
+      <div className="mt-8 rounded-3xl border border-dashed border-gold bg-gold-soft p-5 sm:p-8">
         <AutoDir as="p" className="leading-8">
           {dict.media.playerNote}
         </AutoDir>

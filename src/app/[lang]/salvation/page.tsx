@@ -18,12 +18,12 @@ export default async function SalvationPage({ params }: PageProps<"/[lang]/salva
   return (
     <>
       <PageHeader eyebrow={page.eyebrow} title={page.title} lead={page.lead} />
-      <div className="mx-auto grid max-w-3xl gap-10 px-5 py-16">
+      <div className="mx-auto grid max-w-3xl gap-10 px-4 py-12 sm:px-5 sm:py-16">
         <AutoDir as="p" className="text-lg leading-9 text-muted">
           {page.intro}
         </AutoDir>
         <section>
-          <AutoDir as="h2" className="text-3xl font-semibold">
+          <AutoDir as="h2" className="text-2xl font-semibold sm:text-3xl">
             {page.stepsTitle}
           </AutoDir>
           <ol className="mt-6 grid gap-4">
@@ -49,7 +49,7 @@ export default async function SalvationPage({ params }: PageProps<"/[lang]/salva
           </ol>
         </section>
         <section>
-          <AutoDir as="h2" className="text-3xl font-semibold">
+          <AutoDir as="h2" className="text-2xl font-semibold sm:text-3xl">
             {page.afterTitle}
           </AutoDir>
           <ul className="mt-4 grid gap-3 leading-8 text-muted">
@@ -60,7 +60,7 @@ export default async function SalvationPage({ params }: PageProps<"/[lang]/salva
             ))}
           </ul>
         </section>
-        <section className="rounded-3xl bg-ink p-8 text-cream">
+        <section className="rounded-3xl bg-ink p-6 text-cream sm:p-8">
           <AutoDir as="h2" className="text-2xl font-semibold">
             {page.inviteTitle}
           </AutoDir>

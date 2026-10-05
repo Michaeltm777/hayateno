@@ -19,7 +19,7 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/about">) 
   return (
     <>
       <PageHeader eyebrow={about.eyebrow} title={about.title} lead={about.lead} />
-      <div className="mx-auto grid max-w-6xl gap-12 px-5 py-16">
+      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:px-5 sm:py-16">
         <div className="grid gap-4 text-lg leading-9 text-muted">
           {about.story.map((paragraph) => (
             <AutoDir as="p" key={paragraph}>
@@ -29,10 +29,10 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/about">) 
         </div>
 
         <section>
-          <AutoDir as="h2" className="text-3xl font-semibold">
+          <AutoDir as="h2" className="text-2xl font-semibold sm:text-3xl">
             {about.goalsTitle}
           </AutoDir>
-          <div className="mt-6 grid gap-4 md:grid-cols-3">
+          <div className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {about.goals.map((goal) => (
               <article key={goal.title} className="rounded-3xl border border-line bg-cream p-6">
                 <AutoDir as="h3" className="text-xl font-semibold">
@@ -47,7 +47,7 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/about">) 
         </section>
 
         <section>
-          <AutoDir as="h2" className="text-3xl font-semibold">
+          <AutoDir as="h2" className="text-2xl font-semibold sm:text-3xl">
             {about.focusesTitle}
           </AutoDir>
           <ol className="mt-6 grid gap-4 md:grid-cols-2">
@@ -66,7 +66,7 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/about">) 
         </section>
 
         <section className="grid gap-4 md:grid-cols-2">
-          <article className="rounded-3xl bg-purple-deep p-8 text-cream">
+          <article className="rounded-3xl bg-purple-deep p-6 text-cream sm:p-8">
             <AutoDir as="h2" className="text-2xl font-semibold">
               {about.scheduleTitle}
             </AutoDir>
@@ -78,7 +78,7 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/about">) 
               ))}
             </ul>
           </article>
-          <article className="rounded-3xl border border-line bg-cream p-8">
+          <article className="rounded-3xl border border-line bg-cream p-6 sm:p-8">
             <AutoDir as="h2" className="text-2xl font-semibold">
               {about.placeTitle}
             </AutoDir>
@@ -102,11 +102,11 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/about">) 
           </article>
         </section>
 
-        <section className="rounded-3xl border border-line bg-white p-8">
+        <section className="rounded-3xl border border-line bg-white p-6 sm:p-8">
           <AutoDir as="p" className="text-sm text-gold">
             {about.pastorTitle}
           </AutoDir>
-          <AutoDir as="h2" className="mt-2 text-3xl font-semibold">
+          <AutoDir as="h2" className="mt-2 text-2xl font-semibold sm:text-3xl">
             {about.pastorName}
           </AutoDir>
           <AutoDir as="p" className="mt-4 max-w-3xl leading-8 text-muted">
